@@ -19,4 +19,12 @@ def create_app(config=None):
     def health():
         return {"status": "ok"}
 
+
+    
+    @app.get("/books")
+    def list_books():
+        books = []
+        if not books:
+            return "<h1>Books</h1><p>No books yet</p>"
+
     return app
