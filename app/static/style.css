@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  font-family: -apple-system, "Segoe UI", Arial, sans-serif;
+  color: #1f2933;
+  background: #f7f9fb;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background: #102a43;
+}
+
+.site-header a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.brand {
+  font-weight: bold;
+}
+
+nav a {
+  margin-left: 16px;
+}
+
+main {
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+th, td {
+  padding: 8px 12px;
+  border-bottom: 1px solid #d9e2ec;
+  text-align: left;
+}
+
+.flash {
+  padding: 10px 14px;
+  border-radius: 4px;
+  background: #e3f2e8;
+  border: 1px solid #b7dfc4;
+}
+
+.flash-error {
+  background: #fdecec;
+  border-color: #f4c2c2;
+}
+
+.button, button {
+  padding: 6px 12px;
+  border: 1px solid #2f6fb0;
+  border-radius: 4px;
+  background: #2f6fb0;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
