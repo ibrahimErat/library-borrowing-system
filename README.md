@@ -33,10 +33,28 @@ cd library-borrowing-system
 python3 -m venv .venv
 source .venv/bin/activate        # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
+flask --app app init-db          # create empty tables (deletes existing data)
+flask --app app seed             # add 10 sample books and 3 sample members
 flask --app app run
 ```
 
 Open http://127.0.0.1:5000 in a browser. The health check is at http://127.0.0.1:5000/health.
+The database file is `instance/library.db` (not committed to Git).
+
+## Building a feature on the database
+
+- **Connection:** `from app.db import get_db` → `db = get_db()` inside a route. Rows work like dicts: `book["title"]`. Call `db.commit()` after writing.
+- **Rule broken?** `from app.errors import LibraryError` → `raise LibraryError("Readable message")`. The route catches it and calls `flash(str(error), "error")`.
+- **Pages:** start each template with `{% extends "base.html" %}` and put the page inside `{% block content %}`. The layout already has the navigation and shows flashed messages.
+- **Routes:** add them to a Blueprint in `app/routes/` (for example `books.py` with `bp = Blueprint("books", __name__)`) and register it in `create_app()` in `app/__init__.py`.
+- **Tests:** use the `db` fixture to test functions directly and the `client` fixture to test pages. Each test gets a new, empty database.
+
+```python
+def test_add_book_sets_available_copies(db):
+    book_id = add_book(db, "Dune", "Frank Herbert", 2)
+    book = get_book(db, book_id)
+    assert book["available_copies"] == 2
+```
 
 ## Run the tests
 
