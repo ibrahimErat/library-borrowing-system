@@ -8,15 +8,15 @@ Semester project for **Software Development Methodologies 2026/2027** (Scrum + X
 
 | Member | GitHub |
 |---|---|
-| İbrahim Erat | `<username>` |
-| Abubakr Gafarov | `<username>` |
-| Mert Gumus | `<username>` |
-| Dinkinesh Nure | `<username>` |
-| Yiğidhan Soytürk | `<username>` |
+| İbrahim Erat | `ibrahimErat` |
+| Abubakr Gafarov | `gafarovabubakr233-prog` |
+| Mert Gumus | `mertg0138` |
+| Dinkinesh Nure | `Dinkineshnure` |
+| Yiğidhan Soytürk | `yigidhansoyturk` |
 
 ## Links
 
-- Issue board: `<GitHub Projects link>`
+- Issue board: https://github.com/users/ibrahimErat/projects/1
 - Living project report: [docs/report.md](docs/report.md)
 - Team agreement and Definition of Done: [docs/team-agreement.md](docs/team-agreement.md)
 - Sprint records: [docs/sprints/](docs/sprints/)
