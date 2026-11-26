@@ -1,6 +1,6 @@
 # Product Backlog
 
-The live backlog is the GitHub board: https://github.com/ibrahimErat/library-borrowing-system/projects. This file is the Sprint 0 starting version used to create the issues. Every story becomes one issue with the label `user-story` and its priority.
+The live backlog is the GitHub board: https://github.com/users/ibrahimErat/projects/1. This file is the Sprint 0 starting version used to create the issues. Every story becomes one issue with the label `user-story` and its priority.
 
 **Order rationale:** books must exist before they can be borrowed, and members must exist before loans, so book management comes first (dependency). Borrowing and returning are the core value of the product, so they follow immediately. Search, overdue tracking and history add value on top of the core and come last. Login is a stretch goal because it adds risk without being needed to demonstrate the main journeys.
 

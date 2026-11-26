@@ -258,8 +258,8 @@ Each member's contributions will be updated with GitHub issue, pull request, and
 
 ### Project Resources
 
-- GitHub repository: `ibrahimErat/library-borrowing-system`
-- Project board: GitHub Projects.
+- GitHub repository: https://github.com/ibrahimErat/library-borrowing-system
+- Project board: https://github.com/users/ibrahimErat/projects/1
 - Setup instructions: `README.md`
 - Product backlog: `docs/backlog.md`
 - Architecture: `docs/architecture.md`
