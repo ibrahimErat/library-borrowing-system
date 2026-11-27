@@ -19,4 +19,7 @@ def create_app(config=None):
     def health():
         return {"status": "ok"}
 
+    from app.routes.books import bp as books_bp
+    app.register_blueprint(books_bp)
+
     return app
