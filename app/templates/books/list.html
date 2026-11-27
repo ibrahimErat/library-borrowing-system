@@ -1,0 +1,35 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Books</h1>
+
+{% if books %}
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Total copies</th>
+        <th>Available copies</th>
+        <th>Status</th>
+    </tr>
+    {% for book in books %}
+    <tr>
+        <td>{{ book.title }}</td>
+        <td>{{ book.author }}</td>
+        <td>{{ book.total_copies }}</td>
+        <td>{{ book.available_copies }}</td>
+        <td>
+            {% if book.available_copies == 0 %}
+                Not available
+            {% else %}
+                Available
+            {% endif %}
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<p>No books yet</p>
+{% endif %}
+{% endblock %}

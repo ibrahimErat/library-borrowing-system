@@ -19,12 +19,7 @@ def create_app(config=None):
     def health():
         return {"status": "ok"}
 
-
-    
-    @app.get("/books")
-    def list_books():
-        books = []
-        if not books:
-            return "<h1>Books</h1><p>No books yet</p>"
+    from app.routes.books import bp as books_bp
+    app.register_blueprint(books_bp)
 
     return app
